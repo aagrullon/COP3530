@@ -1,0 +1,33 @@
+//header files
+#include <iostream>
+#include <cmath>
+using namespace std;
+int main()
+{
+    //declared variables
+    double a, b, c, x, result1, result2;
+    //prompt for input; initialize variables
+    cout << "Enter value of a:  " << flush;
+    cin >> a;
+    cout << "\nEnter value of b:  " << flush;
+    cin >> b;
+    cout << "\nEnter value of c:  " << flush;
+    cin >> c;
+    cout << endl;
+    //calculate pow(b,2)-4ac
+    x = pow(b,2) - 4 * a * c;
+    //set conditions and output roots
+    if (x == 0)
+    {
+        result1 = ( -b + sqrt(x) ) / (2 * a);
+        cout << "Two repeated roots of:  " << result1 << endl;
+    }
+    if (x < 0)
+        cout << "Two complex roots; (-) under the radical:  " << endl;
+    if (x > 0)
+    {
+        result1 = ( -b + sqrt(x) ) / (2 * a);
+        result2 = ( -b - sqrt(x) ) / (2 * a);
+        cout << "Two real roots of :  " << result1 << " and " << result2 << endl;
+    }
+}
