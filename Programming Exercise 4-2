@@ -1,0 +1,49 @@
+#include<iostream>
+
+using namespace std;
+
+int main(){
+int num1,num2,num3;
+int res1,res2,res3;
+
+cout << "Enter three numbers : ";
+cin >> num1;
+cin >> num2;
+cin >> num3;
+
+if(num1 > num2 && num1 > num3){
+res1 = num1;
+if(num2 > num3){
+res2 = num2;
+res3 = num3;
+}else{
+res2 = num3;
+res3 = num2;
+}
+}else if(num2 > num1 && num2 > num3){
+res1 = num2;
+if(num1 > num3){
+res2 = num1;
+res3 = num3;
+}else{
+res2 = num3;
+res3 = num1;
+}
+}else{
+res1 = num3;
+if(num1 > num2){
+res2 = num1;
+res3 = num2;
+}else{
+res2 = num2;
+res3 = num1;
+}
+}
+
+
+cout << "Result in ascending order : \n";
+cout << res3 <<" "<< res2 << " " << res1 <<endl;
+
+
+return 0;
+}
